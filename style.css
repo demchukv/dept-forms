@@ -1,0 +1,113 @@
+:root {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  background-color: antiquewhite;
+  padding: 20px;
+}
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+.check-search-block {
+  position: relative;
+}
+.check-search-field {
+  position: relative;
+  text-align: right;
+}
+.check-search-input {
+  border: 1px solid #e3e3e3;
+  outline: none;
+  border-radius: 24px;
+  padding: 16px 55px 16px 10px;
+  color: #494949;
+  width: 200px;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+}
+.check-search-input-active {
+  width: 100%;
+}
+.check-search-input::placeholder {
+  color: rgb(200, 200, 200);
+}
+.check-search-input-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 8px;
+  width: 36px;
+  height: 36px;
+  color: #e3e3e3;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2215%22%20height%3D%2215%22%20viewBox%3D%220%200%2015%2015%22%3E%3Cpath%20fill%3D%22%23535C68%22%20fill-rule%3D%22evenodd%22%20d%3D%22M1.33%205.5c0-2.304%201.866-4.17%204.17-4.17S9.67%203.195%209.67%205.5c0%202.305-1.865%204.17-4.17%204.17-2.305%200-4.17-1.865-4.17-4.17m12.528%206.944l-3.816-3.817-.014-.008C10.64%207.73%2011%206.66%2011%205.5%2011%202.462%208.537%200%205.5%200S0%202.462%200%205.5%202.463%2011%205.5%2011c1.158%200%202.232-.36%203.118-.972.004.004.005.01.01.014l3.816%203.817c.372.37.982.37%201.354%200l.06-.063c.372-.372.372-.982%200-1.354%22/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+.check-search-input-icon:hover {
+  color: #494949;
+}
+.check-search-input-icon-active {
+  color: black;
+}
+
+.check-search-panel {
+  position: absolute;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  background-color: #fff;
+  -webkit-box-shadow: 0 7px 21px rgba(83, 92, 105, 0.12),
+    0 -1px 6px 0 rgba(83, 92, 105, 0.06);
+  box-shadow: 0 7px 21px rgba(83, 92, 105, 0.12),
+    0 -1px 6px 0 rgba(83, 92, 105, 0.06);
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: stretch;
+  -ms-flex-pack: stretch;
+  justify-content: stretch;
+  border-radius: 10px;
+  will-change: opacity;
+  transition: all 0.3s ease;
+}
+.check-search-panel-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.check-search-form-field {
+  margin-bottom: 12px;
+}
+.check-form-label {
+  font-size: 12px;
+  color: rgb(168, 173, 180);
+  display: block;
+  margin-bottom: 2px;
+}
+.check-form-input {
+  color: rgb(73, 73, 73);
+  padding: 8px;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  outline: none;
+  width: 100%;
+}
+.check-form-input:active,
+.check-form-input:focus {
+  border: 1px solid rgba(81, 203, 238, 1);
+}

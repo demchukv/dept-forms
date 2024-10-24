@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="./style.css" />
+    <title>Dept forms</title>
+  </head>
+  <body>
+    <div class="check-search-block">
+      <div class="check-search-field">
+        <input
+          class="check-search-input"
+          type="search"
+          id="check-search"
+          placeholder="Фільтр + Пошук"
+        />
+        <div class="check-search-input-icon" id="check-search-icon"></div>
+      </div>
+      <div class="check-search-panel">
+        <form method="post" class="check-search-form" id="check-search-form">
+          <div class="check-search-form-field">
+            <label class="check-form-label" for="check-number">Номер</label>
+            <input
+              class="check-form-input"
+              type="number"
+              min="0"
+              name="check-number"
+              id="check-number"
+            />
+          </div>
+          <div class="check-search-form-field">
+            <label class="check-form-label" for="check-contragent"
+              >Контрагент</label
+            >
+            <input
+              class="check-form-input"
+              type="text"
+              name="check-contragent"
+              id="check-contragent"
+            />
+          </div>
+          <div class="check-search-form-field">
+            <label class="check-form-label" for="check-edrpou">ЄДРПОУ</label>
+            <input
+              class="check-form-input"
+              type="number"
+              min="0"
+              name="check-edrpou"
+              id="check-edrpou"
+            />
+          </div>
+          <div class="check-search-form-field">
+            <label class="check-form-label" for="check-direction"
+              >Напрямок</label
+            >
+            <select
+              class="check-form-input"
+              name="check-direction"
+              id="check-direction"
+            >
+              <option value="0">Всі</option>
+              <option value="1">Вхідний</option>
+              <option value="2">Вихідний</option>
+            </select>
+          </div>
+          <div class="check-search-form-field">
+            <label class="check-form-label" for="check-status">Статус</label>
+            <select
+              class="check-form-input"
+              name="check-status"
+              id="check-status"
+            >
+              <option value="0">Всі</option>
+              <option value="1">Отримано</option>
+              <option value="2">Проведено</option>
+              <option value="3">На обробці банком</option>
+            </select>
+          </div>
+          <div class="check-form-buttons">
+            <button class="check-find-button" type="submit" id="check-find-btn">
+              Знайти
+            </button>
+            <button
+              class="check-reset-button"
+              type="button"
+              id="check-reset-btn"
+            >
+              Скинути
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="./main.js" defer></script>
+  </body>
+</html>
