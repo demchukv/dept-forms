@@ -1,0 +1,168 @@
+:root {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  background-color: antiquewhite;
+  padding: 20px;
+}
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+.check-search-block {
+  position: relative;
+}
+.check-search-field {
+  position: relative;
+  text-align: right;
+  margin-bottom: 10px;
+}
+.check-search-input {
+  border: 1px solid #e3e3e3;
+  outline: none;
+  border-radius: 24px;
+  padding: 16px 55px 16px 10px;
+  color: #494949;
+  width: 200px;
+  transition: all 0.3s ease;
+}
+.check-search-input-active {
+  width: 100%;
+}
+.check-search-input::placeholder {
+  color: rgb(200, 200, 200);
+}
+.check-search-input-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 8px;
+  width: 26px;
+  height: 26px;
+  color: #e3e3e3;
+  fill: #e3e3e3;
+  /* background-image: url(data:image/svg+xml;base64,DQo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjI2IiBoZWlnaHQ9IjI2IiB2aWV3Qm94PSIwIDEgMjYgMjciPjxwYXRoIGQ9Ik0xOC44OTYwNTQsMTYuNzc0NzMzNyBMMjEuODQ3NDAzNCwxOS43MjYwODMxIEMyMi4yNDEzMjQyLDIwLjEyMDAwMzkgMjIuMjQ3NjUyLDIwLjc1MjM0OCAyMS44NTQyOTEyLDIxLjE0NTcwODggTDIxLjE0NTcwODgsMjEuODU0MjkxMiBDMjAuNzU1NTkyLDIyLjI0NDQwOCAyMC4xMjAwNzM1LDIyLjI0MTM5MzggMTkuNzI2MDgzMSwyMS44NDc0MDM0IEwxNi43NzQ3MzM3LDE4Ljg5NjA1NCBDMTUuNjg1NTc3MiwxOS41OTQ3OTQ0IDE0LjM5MDEwOSwyMCAxMywyMCBDOS4xMzQwMDY4LDIwIDYsMTYuODY1OTkzMiA2LDEzIEM2LDkuMTM0MDA2OCA5LjEzNDAwNjgsNiAxMyw2IEMxNi44NjU5OTMyLDYgMjAsOS4xMzQwMDY4IDIwLDEzIEMyMCwxNC4zOTAxMDkgMTkuNTk0Nzk0NCwxNS42ODU1NzcyIDE4Ljg5NjA1NCwxNi43NzQ3MzM3IFogTTEzLDE4IEMxNS43NjE0MjM3LDE4IDE4LDE1Ljc2MTQyMzcgMTgsMTMgQzE4LDEwLjIzODU3NjMgMTUuNzYxNDIzNyw4IDEzLDggQzEwLjIzODU3NjMsOCA4LDEwLjIzODU3NjMgOCwxMyBDOCwxNS43NjE0MjM3IDEwLjIzODU3NjMsMTggMTMsMTggWiIvPjwvc3ZnPg0K); */
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+.check-search-input-icon-k {
+  width: 26px;
+  height: 26px;
+  fill: red;
+}
+.check-search-input-icon:hover {
+  color: #494949;
+}
+.check-search-input-icon-active {
+  color: black;
+}
+
+.check-search-panel {
+  position: absolute;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  background-color: #fff;
+  -webkit-box-shadow: 0 7px 21px rgba(83, 92, 105, 0.12),
+    0 -1px 6px 0 rgba(83, 92, 105, 0.06);
+  box-shadow: 0 7px 21px rgba(83, 92, 105, 0.12),
+    0 -1px 6px 0 rgba(83, 92, 105, 0.06);
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: stretch;
+  -ms-flex-pack: stretch;
+  justify-content: stretch;
+  border-radius: 10px;
+  will-change: opacity;
+  transition: all 0.3s ease;
+}
+.check-search-panel-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.check-search-form-field {
+  margin-bottom: 12px;
+}
+.check-form-label {
+  font-size: 12px;
+  color: rgb(168, 173, 180);
+  display: block;
+  margin-bottom: 2px;
+}
+.check-form-input {
+  color: rgb(73, 73, 73);
+  padding: 8px;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  outline: none;
+  width: 100%;
+}
+.check-form-input:active,
+.check-form-input:focus {
+  border: 1px solid rgba(81, 203, 238, 1);
+}
+
+.check-form-buttons {
+  display: flex;
+  direction: flex-row;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+.check-find-button {
+  background-color: #3bc8f5;
+  border: 1px solid #3bc8f5;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.check-find-button:hover {
+  background-color: #3eddff;
+  border: 1px solid #3eddff;
+}
+.check-find-button:active {
+  background-color: #12b1e3;
+  border: 1px solid #12b1e3;
+}
+
+.check-reset-button {
+  background-color: #fff;
+  border: 1px solid #c6cdd3;
+  border-radius: 4px;
+  color: #525c69;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.check-reset-button:hover {
+  background-color: #cfd4d8;
+  border: 1px solid #c6cdd3;
+}
+.check-reset-button:active {
+  background-color: #dde2e5;
+  border: 1px solid #9fa4ab;
+}
