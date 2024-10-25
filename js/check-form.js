@@ -34,6 +34,7 @@ if (checkResetBtn) {
     event.preventDefault();
     const form = document.querySelector(".check-search-form");
     filterArea.innerHTML = "";
+    checkSearch.placeholder = "Фільтр + Пошук";
     form.reset();
     hideCheckPopup();
     reduceCheckSearch();
@@ -61,6 +62,11 @@ if (checkFindBtn) {
         filterArea.insertAdjacentHTML("beforeend", fLabel);
       }
     });
+    if (filterArea.innerHTML !== "") {
+      checkSearch.placeholder = "+ Пошук";
+    } else {
+      checkSearch.placeholder = "Фільтр + Пошук";
+    }
     updateFiltersLabel();
     //TODO: send to server
     console.log(data);
@@ -74,7 +80,6 @@ function updateFiltersLabel() {
     checkFilterLabels.forEach((label) => {
       label.addEventListener("click", (event) => {
         event.preventDefault();
-        console.log(label.getAttribute("id"));
         const id = label.getAttribute("id");
         const name = id.replace("filter-", "");
         const field = document.getElementById(name);
