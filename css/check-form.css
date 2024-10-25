@@ -43,6 +43,7 @@ button {
 }
 .check-search-input {
   border: 1px solid #e3e3e3;
+  font-size: 15px;
   outline: none;
   border-radius: 6px;
   padding: 16px 55px 16px 10px;
