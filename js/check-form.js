@@ -36,7 +36,10 @@ if (checkFindBtn) {
     const form = document.querySelector(".check-search-form");
     const formData = new FormData(form);
     //TODO: send to server
-    formData.forEach((value, name) => console.log(name, "=", value));
+    let data = {};
+    formData.forEach((value, name) => (data[name] = value));
+    console.log(data);
+    alert(JSON.stringify(data, null, 2));
   });
 }
 
