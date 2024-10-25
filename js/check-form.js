@@ -6,6 +6,7 @@ const checkFindBtn = document.getElementById("check-find-btn");
 const filterArea = document.getElementById("check-filter-area");
 
 const filterFieldsList = [
+  { name: "check-search", type: "text", label: "Пошук" },
   { name: "check-number", type: "number", label: "Номер" },
   { name: "check-contragent", type: "text", label: "Контрагент" },
   { name: "check-edrpou", type: "number", label: "ЄДРПОУ" },
@@ -54,7 +55,7 @@ if (checkFindBtn) {
     filterArea.innerHTML = "";
     formData.forEach((value, name) => {
       data[name] = value;
-      if (value.trim() !== "" && value !== "0") {
+      if (value.trim() !== "" && value !== "0" && name !== "check-search") {
         let fField = filterFieldsList.find((f) => f.name === name);
         let element = elements.find((e) => e.name === name);
         for (let j = 0; j < element.length; j++) {
@@ -63,7 +64,7 @@ if (checkFindBtn) {
             break;
           }
         }
-
+        console.log(name, value, fField);
         let fLabel = `<div class="check-filter-label" id="filter-${name}">
                   <div class="check-filter-label-text" title="${value.trim()}">${
           fField.label
