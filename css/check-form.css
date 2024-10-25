@@ -67,6 +67,7 @@ button {
 .check-search-panel {
   position: absolute;
   left: 20px;
+  right: 20px;
   visibility: hidden;
   opacity: 0;
   background-color: #fff;

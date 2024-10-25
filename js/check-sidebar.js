@@ -21,3 +21,5 @@ sidebarOverlay.addEventListener("click", (event) => {
   sidebarOverlay.classList.remove("check-sidebar-overlay-active");
   sidebar.classList.remove("check-sidebar-block-active");
 });
+
+// Get data from server about check
