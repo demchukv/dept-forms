@@ -3,6 +3,15 @@ const checkSearchIcon = document.getElementById("check-search-icon");
 const checkSearchPopup = document.querySelector(".check-search-panel");
 const checkResetBtn = document.getElementById("check-reset-btn");
 const checkFindBtn = document.getElementById("check-find-btn");
+const filterArea = document.getElementById("check-filter-area");
+
+const filterFieldsList = [
+  { name: "check-number", type: "number", label: "Номер" },
+  { name: "check-contragent", type: "text", label: "Контрагент" },
+  { name: "check-edrpou", type: "number", label: "ЄДРПОУ" },
+  { name: "check-direction", type: "number", label: "Напрямок" },
+  { name: "check-status", type: "number", label: "Статус" },
+];
 
 if (checkSearch) {
   checkSearch.addEventListener("focus", (event) => {
@@ -24,6 +33,7 @@ if (checkResetBtn) {
   checkResetBtn.addEventListener("click", (event) => {
     event.preventDefault();
     const form = document.querySelector(".check-search-form");
+    filterArea.innerHTML = "";
     form.reset();
     hideCheckPopup();
     reduceCheckSearch();
@@ -37,10 +47,37 @@ if (checkFindBtn) {
     const formData = new FormData(form);
     //TODO: send to server
     let data = {};
-    formData.forEach((value, name) => (data[name] = value));
+    filterArea.innerHTML = "";
+    formData.forEach((value, name) => {
+      data[name] = value;
+      if (value.trim() !== "" && value !== "0") {
+        let fField = filterFieldsList.find((f) => f.name === name);
+        console.log(fField.label);
+        let fLabel = `<div class="check-filter-label" id="filter-${name}">
+                  <div class="check-filter-label-text">${
+                    fField.label
+                  }: ${value.trim()}</div>
+                  <button type="button" class="check-filter-label-close">&times;</button>
+                </div>`;
+        filterArea.insertAdjacentHTML("beforeend", fLabel);
+      }
+    });
+    updateFiltersLabel();
     console.log(data);
     alert(JSON.stringify(data, null, 2));
   });
+}
+
+function updateFiltersLabel() {
+  const checkFilterLabels = document.querySelectorAll(".check-filter-label");
+  if (checkFilterLabels) {
+    checkFilterLabels.forEach((label) => {
+      label.addEventListener("click", (event) => {
+        event.preventDefault();
+        label.remove();
+      });
+    });
+  }
 }
 
 function increaseCheckSearch() {
