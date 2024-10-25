@@ -7,6 +7,11 @@
     <title>Dept forms</title>
   </head>
   <body>
+    <button class="check-find-button" id="open-sidebar-btn">
+      <span class="check-button-sign">Відкрити сайдбар</span>
+    </button>
+
+    <!-- Filter and search block -->
     <div class="check-search-block">
       <form method="post" class="check-search-form" id="check-search-form">
         <div class="check-search-field">
@@ -117,6 +122,25 @@
         </div>
       </form>
     </div>
+
+    <!-- Sidebar block -->
+    <div class="check-sidebar-block" id="check-sidebar">
+      <div class="check-sidebar-close">
+        <button
+          type="button"
+          class="check-sidebar-close-button"
+          id="check-sidebar-close-btn"
+        >
+          Закрити
+        </button>
+      </div>
+      <div class="check-sidebar-panel">
+        <form class="check-sidebar-form">
+          <h2 class="check-sidebar-title">Рознесення платежу</h2>
+        </form>
+      </div>
+    </div>
+    <div class="check-sidebar-overlay"></div>
 
     <script type="module" src="./main.js" defer></script>
   </body>
