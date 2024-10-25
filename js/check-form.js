@@ -64,7 +64,7 @@ if (checkFindBtn) {
             break;
           }
         }
-        console.log(name, value, fField);
+
         let fLabel = `<div class="check-filter-label" id="filter-${name}">
                   <div class="check-filter-label-text" title="${value.trim()}">${
           fField.label
