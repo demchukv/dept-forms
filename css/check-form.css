@@ -82,30 +82,36 @@ button {
   fill: black;
 }
 .check-search-text {
-  flex-grow: 1;
-  display: flex;
+  display: grid;
+  gap: 4px;
+  grid-template-columns: auto minmax(100px, 100%);
   align-items: center;
-  flex-wrap: nowrap;
-  -ms-flex-pack: start;
+  width: 100%;
+}
+.check-search-text-container {
+  min-width: 150px;
+  width: 100%;
 }
 .check-search-filter-area {
-  max-width: 50%;
+  /* max-width: 50%; */
+  overflow: hidden;
   color: #ccc;
   font-size: 15px;
   line-height: 1;
   flex-shrink: 0;
   padding-left: 10px;
+  max-width: 100%;
+  overflow: hidden;
 
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
   align-items: center;
   gap: 4px;
-  justify-content: flex-start;
 }
 .check-filter-label {
   color: #333;
   background-color: #bcedfc;
   padding: 8px;
-  width: auto;
 
   display: flex;
   align-items: center;
@@ -116,13 +122,14 @@ button {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  width: 100px;
+  min-width: 50px;
 }
 .check-filter-label-close {
   padding: 0;
   background: transparent;
   border: none;
   color: #afaeae;
+  width: 14px;
   font-size: 18px;
   font-weight: 600;
   display: flex;
