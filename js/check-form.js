@@ -26,6 +26,7 @@ if (checkResetBtn) {
     const form = document.querySelector(".check-search-form");
     form.reset();
     hideCheckPopup();
+    reduceCheckSearch();
   });
 }
 
@@ -34,6 +35,7 @@ if (checkFindBtn) {
     event.preventDefault();
     const form = document.querySelector(".check-search-form");
     const formData = new FormData(form);
+    //TODO: send to server
     formData.forEach((value, name) => console.log(name, "=", value));
   });
 }

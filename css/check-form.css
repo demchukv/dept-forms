@@ -17,8 +17,10 @@ button {
   outline: none;
 }
 
+/* ======================================== */
 .check-search-block {
   position: relative;
+  z-index: 1000;
 }
 .check-search-field {
   position: relative;
@@ -32,13 +34,13 @@ button {
   padding: 16px 55px 16px 10px;
   color: #494949;
   width: 200px;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 .check-search-input-active {
   width: 100%;
 }
 .check-search-input::placeholder {
-  color: rgb(200, 200, 200);
+  color: #ccc;
 }
 .check-search-input-icon {
   position: absolute;
@@ -47,28 +49,24 @@ button {
   right: 8px;
   width: 26px;
   height: 26px;
-  color: #e3e3e3;
   fill: #e3e3e3;
-  /* background-image: url(data:image/svg+xml;base64,DQo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjI2IiBoZWlnaHQ9IjI2IiB2aWV3Qm94PSIwIDEgMjYgMjciPjxwYXRoIGQ9Ik0xOC44OTYwNTQsMTYuNzc0NzMzNyBMMjEuODQ3NDAzNCwxOS43MjYwODMxIEMyMi4yNDEzMjQyLDIwLjEyMDAwMzkgMjIuMjQ3NjUyLDIwLjc1MjM0OCAyMS44NTQyOTEyLDIxLjE0NTcwODggTDIxLjE0NTcwODgsMjEuODU0MjkxMiBDMjAuNzU1NTkyLDIyLjI0NDQwOCAyMC4xMjAwNzM1LDIyLjI0MTM5MzggMTkuNzI2MDgzMSwyMS44NDc0MDM0IEwxNi43NzQ3MzM3LDE4Ljg5NjA1NCBDMTUuNjg1NTc3MiwxOS41OTQ3OTQ0IDE0LjM5MDEwOSwyMCAxMywyMCBDOS4xMzQwMDY4LDIwIDYsMTYuODY1OTkzMiA2LDEzIEM2LDkuMTM0MDA2OCA5LjEzNDAwNjgsNiAxMyw2IEMxNi44NjU5OTMyLDYgMjAsOS4xMzQwMDY4IDIwLDEzIEMyMCwxNC4zOTAxMDkgMTkuNTk0Nzk0NCwxNS42ODU1NzcyIDE4Ljg5NjA1NCwxNi43NzQ3MzM3IFogTTEzLDE4IEMxNS43NjE0MjM3LDE4IDE4LDE1Ljc2MTQyMzcgMTgsMTMgQzE4LDEwLjIzODU3NjMgMTUuNzYxNDIzNyw4IDEzLDggQzEwLjIzODU3NjMsOCA4LDEwLjIzODU3NjMgOCwxMyBDOCwxNS43NjE0MjM3IDEwLjIzODU3NjMsMTggMTMsMTggWiIvPjwvc3ZnPg0K); */
-  background-repeat: no-repeat;
-  background-position: center;
   cursor: pointer;
+  transition: all 0.25s ease;
 }
-.check-search-input-icon-k {
+.search-icon {
   width: 26px;
   height: 26px;
-  fill: red;
 }
 .check-search-input-icon:hover {
-  color: #494949;
+  fill: #494949;
 }
 .check-search-input-icon-active {
-  color: black;
+  fill: black;
 }
 
 .check-search-panel {
   position: absolute;
-  left: 0;
+  left: 20px;
   visibility: hidden;
   opacity: 0;
   background-color: #fff;
@@ -89,7 +87,7 @@ button {
   justify-content: stretch;
   border-radius: 10px;
   will-change: opacity;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 }
 .check-search-panel-active {
   visibility: visible;
@@ -125,17 +123,26 @@ button {
   align-items: center;
   justify-content: center;
 }
+.check-button-sign {
+  padding: 10px 0;
+}
 .check-find-button {
   background-color: #3bc8f5;
   border: 1px solid #3bc8f5;
   border-radius: 4px;
   color: #fff;
+  fill: #fff;
   font-size: 12px;
   font-weight: 700;
   line-height: 1;
-  padding: 8px 16px;
+  padding: 2px 16px;
   text-transform: uppercase;
   transition: all 0.3s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
 }
 .check-find-button:hover {
   background-color: #3eddff;
@@ -154,9 +161,14 @@ button {
   font-size: 12px;
   font-weight: 700;
   line-height: 1;
-  padding: 8px 16px;
+  padding: 2px 16px;
   text-transform: uppercase;
   transition: all 0.3s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
 }
 .check-reset-button:hover {
   background-color: #cfd4d8;
