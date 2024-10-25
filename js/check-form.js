@@ -45,7 +45,6 @@ if (checkFindBtn) {
     event.preventDefault();
     const form = document.querySelector(".check-search-form");
     const formData = new FormData(form);
-    //TODO: send to server
     let data = {};
     filterArea.innerHTML = "";
     formData.forEach((value, name) => {
@@ -63,6 +62,7 @@ if (checkFindBtn) {
       }
     });
     updateFiltersLabel();
+    //TODO: send to server
     console.log(data);
     alert(JSON.stringify(data, null, 2));
   });
@@ -74,6 +74,11 @@ function updateFiltersLabel() {
     checkFilterLabels.forEach((label) => {
       label.addEventListener("click", (event) => {
         event.preventDefault();
+        console.log(label.getAttribute("id"));
+        const id = label.getAttribute("id");
+        const name = id.replace("filter-", "");
+        const field = document.getElementById(name);
+        field.value = "";
         label.remove();
       });
     });
