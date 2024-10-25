@@ -107,6 +107,7 @@ button {
 }
 .check-form-input {
   color: rgb(73, 73, 73);
+  background-color: #fff;
   padding: 10px;
   font-size: 15px;
   border: 1px solid #e3e3e3;
