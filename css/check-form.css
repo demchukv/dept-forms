@@ -31,6 +31,7 @@ button {
   gap: 12px;
   align-items: center;
   width: 100%;
+  max-width: 100%;
   margin-bottom: 10px;
 }
 .check-search-title {
@@ -40,6 +41,7 @@ button {
 .check-search-field {
   position: relative;
   width: 100%;
+  max-width: 100%;
   background: #fff;
   border-radius: 6px;
 }
@@ -52,7 +54,7 @@ button {
   padding: 16px 55px 16px 4px;
   color: #494949;
   width: 100%;
-  min-width: 100px;
+  min-width: 200px;
   transition: all 0.2s ease;
 }
 .check-search-input::placeholder {
@@ -83,23 +85,27 @@ button {
   flex-grow: 1;
   display: flex;
   align-items: center;
+  max-width: 100%;
 }
 .check-search-filter-area {
   color: #ccc;
   font-size: 15px;
   line-height: 1;
-  flex-shrink: 1;
+  flex-shrink: 0;
   padding-left: 10px;
 
   display: flex;
   align-items: center;
   gap: 4px;
   justify-content: flex-start;
+  max-width: calc(100% - 220px);
+  overflow: hidden;
 }
 .check-filter-label {
   color: #333;
   background-color: #bcedfc;
   padding: 8px;
+  width: auto;
 
   display: flex;
   align-items: center;

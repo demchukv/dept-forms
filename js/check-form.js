@@ -45,18 +45,29 @@ if (checkFindBtn) {
   checkFindBtn.addEventListener("click", (event) => {
     event.preventDefault();
     const form = document.querySelector(".check-search-form");
+
     const formData = new FormData(form);
+
+    const elements = Array.from(form.elements);
+
     let data = {};
     filterArea.innerHTML = "";
     formData.forEach((value, name) => {
       data[name] = value;
       if (value.trim() !== "" && value !== "0") {
         let fField = filterFieldsList.find((f) => f.name === name);
-        console.log(fField.label);
+        let element = elements.find((e) => e.name === name);
+        for (let j = 0; j < element.length; j++) {
+          if (value === element[j].value) {
+            value = element[j].label;
+            break;
+          }
+        }
+
         let fLabel = `<div class="check-filter-label" id="filter-${name}">
-                  <div class="check-filter-label-text">${
-                    fField.label
-                  }: ${value.trim()}</div>
+                  <div class="check-filter-label-text" title="${value.trim()}">${
+          fField.label
+        }: ${value.trim()}</div>
                   <button type="button" class="check-filter-label-close">&times;</button>
                 </div>`;
         filterArea.insertAdjacentHTML("beforeend", fLabel);
