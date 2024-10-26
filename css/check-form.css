@@ -84,7 +84,7 @@ button {
 .check-search-text {
   display: grid;
   gap: 4px;
-  grid-template-columns: auto minmax(100px, 100%);
+  grid-template-columns: minmax(0, auto) auto;
   align-items: center;
   width: 100%;
 }
@@ -113,11 +113,14 @@ button {
   background-color: #bcedfc;
   padding: 8px;
 
-  display: flex;
+  display: grid;
+  /* grid-auto-flow: column; */
+  grid-template-columns: auto 14px;
   align-items: center;
   gap: 6px;
 }
 .check-filter-label-text {
+  display: inline-block;
   text-wrap: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
