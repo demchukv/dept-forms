@@ -84,7 +84,7 @@ button {
 .check-search-text {
   display: grid;
   gap: 4px;
-  grid-template-columns: minmax(0, auto) auto;
+  grid-template-columns: min-content auto;
   align-items: center;
   width: 100%;
 }
@@ -93,13 +93,13 @@ button {
   width: 100%;
 }
 .check-search-filter-area {
-  /* max-width: 50%; */
   overflow: hidden;
   color: #ccc;
   font-size: 15px;
   line-height: 1;
   flex-shrink: 0;
   padding-left: 10px;
+  min-width: 0;
   max-width: 100%;
   overflow: hidden;
 
