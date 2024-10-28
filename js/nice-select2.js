@@ -1,4 +1,4 @@
-import "../css/nice-select2.css";
+// import "../css/nice-select2.css";
 
 // utility functions
 function triggerClick(el) {
