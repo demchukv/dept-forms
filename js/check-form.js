@@ -1,7 +1,11 @@
 import * as NiceSelect from "./nice-select2.js";
 
-NiceSelect.bind(document.getElementById("check-status"));
-NiceSelect.bind(document.getElementById("check-direction"));
+const checkStatusDropdown = NiceSelect.bind(
+  document.getElementById("check-status")
+);
+const checkDirectionDropdown = NiceSelect.bind(
+  document.getElementById("check-direction")
+);
 
 const checkSearch = document.getElementById("check-search");
 const checkSearchIcon = document.getElementById("check-search-icon");
@@ -42,6 +46,10 @@ if (checkResetBtn) {
     filterArea.innerHTML = "";
     checkSearch.placeholder = "Фільтр + Пошук";
     form.reset();
+    checkStatusDropdown.destroy();
+    checkDirectionDropdown.destroy();
+    NiceSelect.bind(document.getElementById("check-status"));
+    NiceSelect.bind(document.getElementById("check-direction"));
     hideCheckPopup();
     reduceCheckSearch();
   });
@@ -85,6 +93,7 @@ if (checkFindBtn) {
       checkSearch.placeholder = "Фільтр + Пошук";
     }
     updateFiltersLabel();
+    hideCheckPopup();
     //TODO: send to server
     console.log(data);
     alert(JSON.stringify(data, null, 2));
@@ -101,6 +110,15 @@ function updateFiltersLabel() {
         const name = id.replace("filter-", "");
         const field = document.getElementById(name);
         field.value = "";
+        if (name === "check-status") {
+          checkStatusDropdown.destroy();
+          NiceSelect.bind(document.getElementById("check-status"));
+        }
+        if (name === "check-direction") {
+          checkDirectionDropdown.destroy();
+          NiceSelect.bind(document.getElementById("check-direction"));
+        }
+
         label.remove();
       });
     });
