@@ -171,6 +171,76 @@
       <div class="check-sidebar-panel">
         <form class="check-sidebar-form">
           <h2 class="check-sidebar-title">Рознесення платежу</h2>
+          <p>Надійшло на рахунок: ТОВ ДЕПТ</p>
+          <ul class="check-panel-list">
+            <li class="check-panel-list-item">
+              <span class="check-panel-list-key">Контрагент:</span>
+              <span class="check-panel-list-value">ТОВ Роги і копита</span>
+            </li>
+            <li class="check-panel-list-item">
+              <span class="check-panel-list-key">Сума:</span>
+              <span class="check-panel-list-value">500,00 UAH</span>
+            </li>
+            <li class="check-panel-list-item">
+              <span class="check-panel-list-key">Дата:</span>
+              <span class="check-panel-list-value">23.10.2024 15:15:34</span>
+            </li>
+            <li class="check-panel-list-item">
+              <span class="check-panel-list-key">Квитанція:</span>
+              <span class="check-panel-list-value"
+                ><a href="#" download>Завантажити</a></span
+              >
+            </li>
+          </ul>
+          <h3 class="check-sidebar-subtitle">
+            Вибір компанії або контакту для рознесення платежу
+          </h3>
+
+          <div class="check-panel-select">
+            <label class="check-panel-label" for="companyName">Вибрати</label>
+            <input
+              type="text"
+              name="companyName"
+              id="companyName"
+              class="check-panel-input"
+            />
+          </div>
+
+          <ul class="check-panel-list">
+            <li class="check-panel-list-item">
+              <span class="check-panel-list-key">ЄДРПОУ компанії:</span>
+              <span class="check-panel-list-value">465465465</span>
+            </li>
+            <li class="check-panel-list-item">
+              <span class="check-panel-list-key"
+                >Поточний баланс компанії:</span
+              >
+              <span class="check-panel-list-value">0 грн</span>
+            </li>
+            <li class="check-panel-list-item">
+              <span class="check-panel-list-key"
+                >Баланс буде поповнено на:</span
+              >
+              <span class="check-panel-list-value">500,00 грн</span>
+            </li>
+          </ul>
+
+          <h3 class="check-sidebar-subtitle">Неоплачені рахунки компанії</h3>
+          <ul class="check-panel-list">
+            <li>
+              1. Віртуальний сервер від 01.01.24 на суму 555 грн - буде оплачено
+              цим поповненням
+            </li>
+            <li>
+              2. Хостинг від 02.02.24 на суму 666 грн - не вистачає коштів
+            </li>
+          </ul>
+
+          <div class="check-panel-button-container">
+            <button type="submit" class="check-find-button">
+              <span class="check-button-sign">Рознести</span>
+            </button>
+          </div>
         </form>
       </div>
     </div>
