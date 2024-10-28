@@ -22,6 +22,7 @@
   user-select: none;
   white-space: nowrap;
   width: auto;
+  margin-top: -20px;
 }
 .nice-select:hover {
   border-color: rgba(81, 203, 238, 1);
