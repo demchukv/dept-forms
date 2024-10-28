@@ -77,9 +77,11 @@
 }
 .check-sidebar-title {
   text-align: center;
+  font-weight: 400;
 }
 .check-sidebar-subtitle {
   text-align: center;
+  font-weight: 500;
 }
 
 .check-panel-list {
