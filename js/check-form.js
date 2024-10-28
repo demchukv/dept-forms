@@ -1,3 +1,8 @@
+import * as NiceSelect from "./nice-select2.js";
+
+NiceSelect.bind(document.getElementById("check-status"));
+NiceSelect.bind(document.getElementById("check-direction"));
+
 const checkSearch = document.getElementById("check-search");
 const checkSearchIcon = document.getElementById("check-search-icon");
 const checkSearchPopup = document.querySelector(".check-search-panel");
