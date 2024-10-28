@@ -196,6 +196,7 @@ button {
   outline: none;
   width: 100%;
 }
+.check-form-input:hover,
 .check-form-input:active,
 .check-form-input:focus {
   border: 1px solid rgba(81, 203, 238, 1);
