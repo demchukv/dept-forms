@@ -100,6 +100,10 @@ if (checkFindBtn) {
   });
 }
 
+function trackBodyClick(event) {
+  console.log(event);
+}
+
 function updateFiltersLabel() {
   const checkFilterLabels = document.querySelectorAll(".check-filter-label");
   if (checkFilterLabels) {
@@ -130,6 +134,7 @@ function increaseCheckSearch() {
   checkSearch.classList.add("check-search-input-active");
   checkSearch.focus();
   showCheckPopup();
+  document.addEventListener("click", trackBodyClick);
 }
 function reduceCheckSearch() {
   if (checkSearchPopup.classList.contains("check-search-panel-active")) {
@@ -138,6 +143,7 @@ function reduceCheckSearch() {
   checkSearchIcon.classList.remove("check-search-input-icon-active");
   checkSearch.classList.remove("check-search-input-active");
   hideCheckPopup();
+  document.removeEventListener("click", trackBodyClick);
 }
 function showCheckPopup() {
   checkSearchPopup.classList.add("check-search-panel-active");

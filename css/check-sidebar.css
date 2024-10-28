@@ -49,9 +49,9 @@
   cursor: pointer;
   margin-top: 20px;
   padding: 8px;
-  background-color: #fff;
-  border-top-left-radius: 16px;
-  border-bottom-left-radius: 16px;
+  background-color: rgba(81, 203, 238, 1);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
   z-index: 1002;
 }
 .check-sidebar-close-button {
@@ -63,13 +63,13 @@
   height: 30px;
   border-radius: 100%;
   border: 1px solid transparent;
-  fill: #e3e3e3;
+  fill: #fff;
   transition: all 0.2s ease;
 }
 .check-sidebar-close-button:hover,
 .check-sidebar-close-button:active {
-  fill: #494949;
-  border-color: #494949;
+  fill: #fff;
+  border-color: #fff;
 }
 .check-sidebar-close-icon {
   width: 26px;
