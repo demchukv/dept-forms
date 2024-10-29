@@ -171,7 +171,7 @@
       <div class="check-sidebar-panel">
         <form class="check-sidebar-form">
           <h2 class="check-sidebar-title">Рознесення платежу</h2>
-          <p>Надійшло на рахунок: ТОВ ДЕПТ</p>
+          <p class="check-sidebar-text">Надійшло на рахунок: ТОВ ДЕПТ</p>
           <ul class="check-panel-list">
             <li class="check-panel-list-item">
               <span class="check-panel-list-key">Контрагент:</span>
@@ -184,12 +184,6 @@
             <li class="check-panel-list-item">
               <span class="check-panel-list-key">Дата:</span>
               <span class="check-panel-list-value">23.10.2024 15:15:34</span>
-            </li>
-            <li class="check-panel-list-item">
-              <span class="check-panel-list-key">Квитанція:</span>
-              <span class="check-panel-list-value"
-                ><a href="#" download>Завантажити</a></span
-              >
             </li>
           </ul>
           <h3 class="check-sidebar-subtitle">
@@ -237,8 +231,12 @@
           </ul>
 
           <div class="check-panel-button-container">
-            <button type="submit" class="check-find-button">
-              <span class="check-button-sign">Рознести</span>
+            <button
+              type="submit"
+              class="check-sidebar-button"
+              disabled="disabled"
+            >
+              Рознести
             </button>
           </div>
         </form>
