@@ -108,6 +108,11 @@ function trackBodyClick(event) {
     hideCheckPopup();
   }
 }
+function onEscapePress(event) {
+  if (event.key === "Escape") {
+    hideCheckPopup();
+  }
+}
 
 function updateFiltersLabel() {
   const checkFilterLabels = document.querySelectorAll(".check-filter-label");
@@ -134,19 +139,13 @@ function updateFiltersLabel() {
   }
 }
 
-/*************  ✨ Codeium Command ⭐  *************/
-/**
- * Increase size of search input and show popup with filters.
- * Also add event listener for body click to reduce search input size
- * when user clicks outside of search input.
- */
-/******  56fdb02b-53a4-4f22-89a9-c6720bae6ed1  *******/
 function increaseCheckSearch() {
   checkSearchIcon.classList.add("check-search-input-icon-active");
   checkSearch.classList.add("check-search-input-active");
   checkSearch.focus();
   showCheckPopup();
   document.addEventListener("click", trackBodyClick);
+  document.addEventListener("keydown", onEscapePress);
 }
 function reduceCheckSearch() {
   if (checkSearchPopup.classList.contains("check-search-panel-active")) {
@@ -156,10 +155,12 @@ function reduceCheckSearch() {
   checkSearch.classList.remove("check-search-input-active");
   hideCheckPopup();
   document.removeEventListener("click", trackBodyClick);
+  document.removeEventListener("keydown", onEscapePress);
 }
 function showCheckPopup() {
   checkSearchPopup.classList.add("check-search-panel-active");
 }
 function hideCheckPopup() {
   checkSearchPopup.classList.remove("check-search-panel-active");
+  checkSearch.blur();
 }
